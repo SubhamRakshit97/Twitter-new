@@ -1,0 +1,203 @@
+body{
+    background-color: white;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    gap: 100px;
+}
+.header{
+    border: 1px solid rgb(242, 234, 234);
+    display: flex;
+    margin-bottom: 20px;
+    gap:20px ;
+    align-items: center;
+    
+}
+.logo{
+    mix-blend-mode: darken;
+    width: 50px;
+    height: 54px;
+   
+}
+.sample-icon{
+    width: 60px;
+    aspect-ratio: auto;
+    border-radius: 50%;
+    padding: 5px 15px 10px 10px;
+
+}
+.tweet_form .host .submit{
+    display: flex;
+    gap: 10px;
+    margin: 2px;
+    border-top: 1px solid lightgray;
+    padding-top: 13px;
+    padding-top: 10px;
+    align-items: center;
+    
+}
+.content{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+.submit input.file{
+   background-color: none;
+   border:1px solid #ccc;
+   padding: 7px 6px;
+   border-radius: 5px
+}
+.diff{
+    background-color: #dedcdc63;
+    border-bottom: 1px solid #ccc;
+    height: 20px;
+    width:100%;
+}
+
+.tweet_form .host div .tweet{
+    background-color: rgb(133, 190, 214);
+    border-radius: 10px;
+    width: 30%;
+    aspect-ratio: auto;
+    padding: 8px;
+    color: white;
+    font-size: medium;
+    border: none;
+    
+ 
+}
+section .host{
+    display: flex;
+}
+.likeunlike{
+    display: flex;
+}
+.unlike img{
+    position: relative;
+    top: 20px;
+    width: 35px;
+    left: 20px;
+}
+
+.name-body .likecount{
+    position: relative;
+    left: 4vw;
+    background-color: rgb(133, 190, 214);;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+li{
+    display:flex;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding:20px 0 ;
+}
+.post_form .name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 14px;
+    border: none ;
+    background-color: rgb(224, 251, 242);
+    width: 50%;
+    border-radius: 5px;
+    padding: 16px ;
+}
+.tweet_form .host div .body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-right: 10px;
+    resize: none;
+    border:none
+    
+}
+div.like img{
+    width: 35px;
+    aspect-ratio: auto;
+    
+}
+div.like{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+section .tweets .img{
+    width:10vw;
+}
+
+ul{
+    padding: 0vw;
+    
+}
+
+.datetime{
+
+    color:gray ;
+}
+.body{
+    padding: 2vw;
+    width:60vw
+}
+.tweet_form input.name{
+    border: 0px;
+    width: 100%;
+    background: #e6fef7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.tweets li .menu_icon{
+    width: 20px;
+    right: 40px;
+    position: absolute;
+
+}
+.tweets li .menu-delete{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border:1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.tweets li .menu-edit{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border:1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+}
+.tweets li .menu-delete a{
+    text-decoration: none;
+    
+}
+.tweets li .menu-edit a{
+    text-decoration: none;
+    
+}
+
+.img img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+div.btn input{
+    
+    padding: 10px;
+    background: #818b8b;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    width: 90px;
+    float: right;
+    margin-left: 20px;
+    margin-top: 11px;
+}

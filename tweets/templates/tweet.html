@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block content %} 
+{%load static%}
+<Section class="content">
+     <div class="header">
+       <img class="logo" src="{% static 'img/Logo.jpg'%}" alt="">
+       <h1 class="head">Home</h1>
+     </div>
+           <form class="tweet_form"  action ="" method="POST" enctype="multipart/form-data" >
+                 {% csrf_token %}
+                     <section class="host">
+                      <div><img class="sample-icon" src="{% static 'img/sample-icon.jpg' %}" alt=""></div>
+                      <div style="width: 70%;">
+                            <div>
+                                <input class="name" type="text" name="name" placeholder="Your Name" required><br><br>
+                                <textarea class="body" id="comment" name="body" placeholder="What's happening?" required></textarea><br>
+                           </div>
+                           <div class="submit">
+                                <input class="file" name="image" type="file">
+                                <input class="tweet" type="submit" value="Tweet">
+                          </div>
+                        </div>    
+                    </section> 
+           </form>
+                   </section>
+                 </div>
+            </form>
+            <div class="diff"></div>
+     <section class="tweets">
+        <ul>
+            {% for post in tweets reversed %}
+            <li>
+               <div><img class="sample-icon" src="{% static 'img/sample-icon.jpg' %}" alt=""></div>
+                  <div><img class="menu_icon js-menu-icon" src ="{% static 'img/option.png' %}" alt="">
+                      <div class="menu-delete"><a href="delete/{{post.id}}/">Delete</a><br>
+                        <a href="edit/{{post.id}}/">Edit</a>
+                    </div>
+                   
+                  </div>
+                  <div class="name-body">
+                      <div class="name-t"> {{ post.name }} <br></div>
+                      <div class="datetime"> {{ post.created_at }} <br></div>
+                      <p> {{ post.body }}</p> <br>  
+                      <div class="img"><img src="{{ post.image.url }}" alt=""></div>   
+                      <div class="likeunlike">
+                      <div class="like">
+                        <a href="like/{{post.id}}/">
+                        <img src="{% static 'img/thumb-up.png' %}" alt=""></a>
+                        
+                      </div> 
+                      <div class="unlike">
+                        <a href="unlike/{{post.id}}/">
+                        <img src="{% static 'img/thumb-down.png' %}" alt=""></a>
+                        {% comment %} <p>{{post.unlike}}</p> {% endcomment %}
+                      </div> 
+
+                      <p class="likecount"> {{post.like}}</p>
+                    </div>
+                  </div>
+           </li>
+            {%endfor%}
+        </ul>
+     </section>
+          <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+          <script src="{% static 'js/tweets.js'%}"></script>
+</Section>
+
+
+{% endblock %}

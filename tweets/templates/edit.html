@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %} 
+{%load static%}
+<Section class="content">
+     <div class="header">
+       <img class="logo" src="{% static 'img/Logo.jpg'%}" alt="">
+       <h1 class="head">Edit</h1>
+     </div>
+           <form class="tweet_form"  action ="" method="POST" enctype="multipart/form-data" >
+                 {% csrf_token %}
+                     <section class="host">
+                      <div><img class="sample-icon" src="{% static 'img/sample-icon.jpg' %}" alt=""></div>
+                      <div style="width: 70%;">
+                            <div>
+                                <input class="name" type="text" name="name" placeholder="Your Name" value="{{tweet.name}}" required><br><br>
+                                <textarea class="body" id="comment" name="body" placeholder="What's happening?" required>{{tweet.body}}</textarea><br>
+                           </div>
+                           <div class="img"><img src="{{ tweet.image.url }}" alt=""></div>
+                           <div class="submit">
+                                <input class="file" name="image" type="file">
+                               
+                          </div>
+                          <div class="btn">
+                              <input class="Update" type="submit" value="Update">
+                              <a href="/">
+                              <input class="edit" type="button" value="Cancel" >
+                        </a>
+                              
+                          </div>
+                        </div>    
+                    </section> 
+           </form>
+</Section>
+ 
+ 
+ {% endblock %}
